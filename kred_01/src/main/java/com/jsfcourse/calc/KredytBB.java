@@ -55,10 +55,12 @@ public class KredytBB {
 		try {
 			int a = Integer.parseInt(this.a);
 			int b = Integer.parseInt(this.b);
-			double c = Double.parseDouble(this.c);
+		 double c = Double.parseDouble(this.c);
 			  
-			b = b * 12;
+			b = b * 12;// bo mies
+			
 			c = c / 100;
+			//wzor na kredyt
 		
 			result = (a * c) / (12 * (1 - (Math.pow((12 / (12 + c)), b))));
 			ctx.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Operacja wykonana poprawnie", null));
