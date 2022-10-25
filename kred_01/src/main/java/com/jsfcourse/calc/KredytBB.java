@@ -11,34 +11,34 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 //@SessionScoped
 public class KredytBB {
-	private String a="1000" ;//kwota
-	private String b="3";//lata
-	private String c ="10";//rata
+	private Double a ;//kwota
+	private Long b;//lata
+	private  Double c ;//rata
 	private Double result;
 
 	@Inject
 	FacesContext ctx;
 
-	public String getA() {
+	public Double getA() {
 		return a;
 	}
 
-	public void setA(String a) {
+	public void setA(Double a) {
 		this.a = a;
 	}
 
-	public String getB() {
+	public Long getB() {
 		return b;
 	}
 
-	public void setB(String b) {
+	public void setB(Long b) {
 		this.b = b;
 	}
-	public String getC() {
+	public Double getC() {
 		return c;
 	}
 
-	public void setC(String c) {
+	public void setC(Double c) {
 		this.c = c;
 	}
 

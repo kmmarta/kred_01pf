@@ -18,17 +18,30 @@
 
 				<p:outputLabel for="a" value="Kwota:" />
 				<p:inputText id="a" value="#{kredytBB.a}" required="true"
-					requiredMessage="Podaj kwotę w zł" />
+					requiredMessage="Podaj kwotę w zł" 
+					converterMessage="musi byc cyfra"
+					validatorMessage="minimum 9 max 10 tys">
+				<f:validateDoubleRange minimum="9" maximum="15000"/>
+				</p:inputText>
+					
 				<p:message for="a" />
 
 				<p:outputLabel for="b" value="Lata:" />
 				<p:inputText id="b" value="#{kredytBB.b}" required="true"
-					requiredMessage="Podaj ilość lat" />
+					requiredMessage="Podaj ilość lat" 
+					converterMessage="musi byc cyfra"
+					validatorMessage="max 10 tys">
+				<f:validateLongRange minimum="1" maximum="40"/>
+					</p:inputText>
 				<p:message for="b" />
 
 				<p:outputLabel for="c" value="Oprocentowanie:" />
 				<p:inputText id="c" value="#{kredytBB.c}" required="true"
-					requiredMessage="Podaj oprocentowanie" />
+					requiredMessage="Podaj oprocentowanie" 
+					converterMessage="musi byc cyfra"
+					validatorMessage="max 10 tys">
+				<f:validateDoubleRange minimum="1" maximum="50"/>
+					</p:inputText>
 				<p:message for="c" />
 	
 
