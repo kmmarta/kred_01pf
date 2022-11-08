@@ -5,18 +5,16 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
     xmlns:p="http://primefaces.org/ui">
-<h:head>
-	<title>KREDYT JSF 02 - </title>
-</h:head>
-<h:body>
 
-	<p:panel
-		header="Kalkulator kred-prime">
+<ui:composition template="/templates/page-template.xhtml">
 
-	<h:form id="bla">
+	<ui:define name="pageContent">
+
+		<p:panel header="Kalkulator">
+	<h:form id="ble">
   <p:panelGrid layout="grid" columns="3" cellpadding="7">
 
-				<p:outputLabel for="a" value="Kwota:" />
+				<p:outputLabel for="a" value="Kwota: " />
 				<p:inputText id="a" value="#{kredytBB.a}" required="true"
 					requiredMessage="Podaj kwotę w zł" 
 					converterMessage="musi byc cyfra"
@@ -26,7 +24,7 @@
 					
 				<p:message for="a" />
 
-				<p:outputLabel for="b" value="Lata:" />
+				<p:outputLabel for="b" value="Lata: " />
 				<p:inputText id="b" value="#{kredytBB.b}" required="true"
 					requiredMessage="Podaj ilość lat" 
 					converterMessage="musi byc cyfra"
@@ -35,7 +33,7 @@
 					</p:inputText>
 				<p:message for="b" />
 
-				<p:outputLabel for="c" value="Oprocentowanie:" />
+				<p:outputLabel for="c" value="Oprocentowanie: " />
 				<p:inputText id="c" value="#{kredytBB.c}" required="true"
 					requiredMessage="Podaj oprocentowanie" 
 					converterMessage="musi byc cyfra"
@@ -58,5 +56,8 @@
 	</h:form>
 	</p:panel>
 
-</h:body>
+	</ui:define>
+
+</ui:composition>
 </html>
+	
